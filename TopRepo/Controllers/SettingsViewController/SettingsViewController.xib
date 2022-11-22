@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="SadaPay" customModuleProvider="target">
+            <connections>
+                <outlet property="deleteCacheButton" destination="XbL-dN-nnr" id="Dih-hF-52s"/>
+                <outlet property="loadingCacheSwitch" destination="YCg-UL-2Oh" id="myt-d6-QAF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dXL-Xo-JMd">
+                    <rect key="frame" x="16" y="75.000000000000014" width="361" height="140.33333333333337"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cache settings:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bP8-kC-jH8">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8US-7Y-vme">
+                            <rect key="frame" x="0.0" y="20.333333333333329" width="361" height="60"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading cached data if available." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwI-OB-zE3">
+                                    <rect key="frame" x="8" y="21.666666666666671" width="210.66666666666666" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YCg-UL-2Oh">
+                                    <rect key="frame" x="304" y="14.666666666666671" width="51" height="31"/>
+                                    <connections>
+                                        <action selector="loadingCacheSwitchAction:" destination="-1" eventType="valueChanged" id="VUt-t8-5hC"/>
+                                    </connections>
+                                </switch>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="YCg-UL-2Oh" secondAttribute="trailing" constant="8" id="0TD-fp-Q8a"/>
+                                <constraint firstItem="HwI-OB-zE3" firstAttribute="leading" secondItem="8US-7Y-vme" secondAttribute="leading" constant="8" id="HZc-WX-QwS"/>
+                                <constraint firstItem="HwI-OB-zE3" firstAttribute="centerY" secondItem="8US-7Y-vme" secondAttribute="centerY" id="UxM-WJ-xhJ"/>
+                                <constraint firstItem="YCg-UL-2Oh" firstAttribute="centerY" secondItem="8US-7Y-vme" secondAttribute="centerY" id="eWI-K1-dW2"/>
+                                <constraint firstAttribute="height" constant="60" id="gf0-5b-3hP"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r00-QT-Ndg">
+                            <rect key="frame" x="0.0" y="80.333333333333343" width="361" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbL-dN-nnr">
+                                    <rect key="frame" x="8" y="10" width="345" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="7JN-Z0-lRS"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <connections>
+                                        <action selector="deleteCacheButtonAction:" destination="-1" eventType="touchUpInside" id="T0q-Yg-Alg"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="5a2-Iy-ceg"/>
+                                <constraint firstItem="XbL-dN-nnr" firstAttribute="centerY" secondItem="r00-QT-Ndg" secondAttribute="centerY" id="bGw-tW-loh"/>
+                                <constraint firstItem="XbL-dN-nnr" firstAttribute="leading" secondItem="r00-QT-Ndg" secondAttribute="leading" constant="8" id="jZx-eC-cSy"/>
+                                <constraint firstAttribute="trailing" secondItem="XbL-dN-nnr" secondAttribute="trailing" constant="8" id="tYZ-g2-SdW"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="dXL-Xo-JMd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="0Yl-YO-i8z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dXL-Xo-JMd" secondAttribute="trailing" constant="16" id="aJx-S4-WSL"/>
+                <constraint firstItem="dXL-Xo-JMd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="rv3-g3-PuD"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
