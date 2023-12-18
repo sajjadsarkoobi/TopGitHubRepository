@@ -51,6 +51,6 @@ final class AppCoordinator: Coordinator {
     }
     
     private func openLoginViewController() {
-        // Show the Loging view controller and start its Flow
+        // Show the Login view controller and start its Flow
     }
 }
